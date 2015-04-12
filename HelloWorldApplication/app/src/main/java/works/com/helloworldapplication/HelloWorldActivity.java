@@ -41,7 +41,7 @@ public class HelloWorldActivity extends ActionBarActivity implements SensorEvent
     int movingWindowCounter = 0;
     int counter = 0;
     double mean = 0.0;
-    double err = 0.1D;
+    double err = 0.08D;
 
 
     @Override
