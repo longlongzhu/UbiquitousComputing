@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HelloWorldActivity">
+
+    <TextView android:text="Sensor!" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textSize="60dp"
+        android:textAlignment="center"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/abc_primary_text_disable_only_material_light"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Counter"
+        android:id="@+id/start"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="81dp"
+        android:layout_alignParentRight="true"
+        android:onClick="start" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Counter"
+        android:id="@+id/end"
+        android:layout_below="@+id/start"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:onClick="stop" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/end"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/sensorXYPlot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        androidPlot.title="Sensor Plot"
+        androidPlot.domainLabel="Domain"
+        androidPlot.rangeLabel="Range"
+        androidPlot.titleWidget.labelPaint.textSize="10dp"
+        androidPlot.domainLabelWidget.labelPaint.textSize="10dp"
+        androidPlot.rangeLabelWidget.labelPaint.textSize="10dp"
+        androidPlot.graphWidget.marginTop="20dp"
+        androidPlot.graphWidget.marginLeft="15dp"
+        androidPlot.graphWidget.marginBottom="25dp"
+        androidPlot.graphWidget.marginRight="10dp"
+        androidPlot.graphWidget.rangeLabelPaint.textSize="10dp"
+        androidPlot.graphWidget.rangeOriginLabelPaint.textSize="10dp"
+        androidPlot.graphWidget.domainLabelPaint.textSize="10dp"
+        androidPlot.graphWidget.domainOriginLabelPaint.textSize="10dp"
+        androidPlot.legendWidget.textPaint.textSize="10dp"
+        androidPlot.legendWidget.iconSizeMetrics.heightMetric.value="15dp"
+        androidPlot.legendWidget.iconSizeMetrics.widthMetric.value="15dp"
+        androidPlot.legendWidget.heightMetric.value="25dp"
+        androidPlot.legendWidget.positionMetrics.anchor="right_bottom"
+        androidPlot.graphWidget.gridLinePaint.color="#000000"
+        android:layout_below="@+id/text" />
+
+
+</RelativeLayout>
